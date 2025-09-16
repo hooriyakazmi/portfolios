@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Hooriya Kazmi</title>
+
+  <!-- Import Jomolhari font -->
+  <link href="https://fonts.googleapis.com/css2?family=Jomolhari&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            jomolhari: ['Jomolhari', 'serif'],
+          },
+          colors: {
+            cream: "#DBD4C7",   // 🎨 exact cream color
+            maroon: "#A92846",
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-jomolhari bg-[#244C71] m-0">
+
+  <!-- Landing (Hero) -->
+  <section id="landing"
+    class="h-screen w-full bg-cream bg-cover bg-center relative flex flex-col justify-between" 
+    style="background-image: url('cover.png');"
+  >
+    <!-- Navbar -->
+    <!-- Navbar -->
+<nav class="fixed top-0 left-0 w-full bg-cream bg-opacity-95 z-50 flex justify-between items-center px-8 py-6 text-black shadow-md">
+  <a href="#landing" class="text-2xl hover:underline">hk.</a>
+  <div class="space-x-8 text-sm">
+    <a href="#about" class="hover:underline text-xl">about me</a>
+    <a href="#resume" class="hover:underline text-xl">resume</a>
+    <a href="#gallery" class="hover:underline text-xl">gallery</a>
+  </div>
+</nav>
+
+
+    <!-- Centered Text -->
+    <div class="flex flex-col items-end justify-center flex-grow text-center">
+      <h1 class="text-5xl md:text-6xl mb-4">portfolio.</h1>
+      <p class="text-lg md:text-xl">by Hooriya Kazmi</p>
+    </div>
+
+    <!-- Scroll button -->
+    <div class="absolute bottom-[-32px] right-6 z-50">
+  <a href="#about" 
+     class="bg-[#244C71] text-white flex items-center justify-center text-sm w-16 h-16 rounded-full hover:bg-[#7d1d34] transition shadow-lg">
+    scroll!
+  </a>
+</div>
+
+  </section>
+ <!-- About Section -->
+<section id="about" class="relative min-h-screen bg-[#244C71] px-12 py-20 flex items-center justify-center">
+  <div class="max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+    <!-- Portrait -->
+    <div class="flex justify-center">
+      <img src="selfie.png" alt="Hooriya" class="w-64 h-64 md:w-[28rem] md:h-[28rem] object-cover">
+    </div>
+
+    <!-- Text Content -->
+    <div class="text-[#DBD4C7]">
+      <h2 class="text-3xl font-bold mb-4">About me.</h2>
+      <p class="mb-4">
+        Hi there! I'm Hooriya, a junior at UIC studying Computer Science (with an Art minor).
+      </p>
+      <p>
+        I love working at the intersection of design and technology, whether it’s prototyping in Figma
+        or coding out a sleek front-end. In my free time, you’ll usually find me experimenting with
+        new design ideas.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Decorative Egg (now inside the section but outside the grid) -->
+  <img src="egg.png" alt="egg decoration"
+       class="absolute -bottom-24 right-8 w-50">
+</section>
+
+
+  <!-- Resume Section -->
+<section id="resume" class="relative min-h-screen bg-cream px-12 py-20">
+  <div class="max-w-6xl mx-auto relative z-10">
+
+    <!-- Heading -->
+    <h2 class="text-4xl font-bold mb-12 text-[#244C71]">Resume.</h2>
+
+    <!-- Top Grid: Experience | Education + Skills -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+      <!-- Experience -->
+      <div>
+        <h3 class="text-2xl font-bold text-[#244C71] mb-6">Experience.</h3>
+
+        <div class="mb-8">
+          <p class="text-sm">Nov 2025</p>
+          <h4 class="font-bold">Grace Hopper Attendee</h4>
+          <p>
+            Selected to attend the Grace Hopper Celebration 2025 through as part of the Apple Everyone Can Code internship program.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <p class="text-sm">June 2025 – Aug 2025</p>
+          <h4 class="font-bold">Everyone Can Code Chicago (Apple Partner)</h4>
+          <p>
+            Collaborated in an Apple-sponsored challenge themed “Help Shape a Better Society” to design a Swift-based mobile app presented to judges. Led UI/UX design with Figma prototypes, emphasizing human-centered design, teamwork, and impactful technology solutions.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <p class="text-sm">Feb 2025 – May 2025</p>
+          <h4 class="font-bold">WiCS Wired Dev Project</h4>
+          <p>
+            Engaged in a semester-long WiCS Dev Project, collaborating with a team to implement the official Women in Computer Science website. Gained experience with Tailwind CSS, Astro.js, and HTML while building responsive pages. Also helped me secure Social Events Chair position for WiCS.
+          </p>
+        </div>
+      </div>
+
+      <!-- Education + Skills -->
+      <div>
+        <h3 class="text-2xl font-bold text-[#244C71] mb-6">Education.</h3>
+
+        <p class="text-sm">Aug 2023 – May 2027</p>
+        <h4 class="font-bold">University of Illinois Chicago</h4>
+        <p class="mb-8">Bachelors in Computer Science + minor in Art</p>
+
+        <h3 class="text-2xl font-bold text-[#244C71] mb-6">Skills.</h3>
+        <p class="mb-2"><span class="font-bold">Design & Prototyping:</span> Figma, Marvel, Canva</p>
+        <p class="mb-2"><span class="font-bold">Web Development:</span> HTML, CSS, Tailwind CSS, Astro, JavaScript</p>
+        <p class="mb-2"><span class="font-bold">Mobile Development:</span> Swift</p>
+        <p class="mb-2"><span class="font-bold">Programming Languages:</span> C++, C, Python, R</p>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="mt-20">
+      <h3 class="text-2xl font-bold text-[#244C71] mb-6">Projects.</h3>
+
+      <div class="mb-8">
+        <p class="text-sm">Sept 2025 – present</p>
+        <h4 class="font-bold">Dasterkhwan</h4>
+        <p>
+          Collaborating with a small team to develop a food delivery app that highlights home chefs and offers affordable alternatives to platforms like Food Panda. Serving as UI/UX designer with focus on culturally relevant and user-friendly designs for the Pakistani market.
+        </p>
+      </div>
+
+      <div class="mb-8">
+        <p class="text-sm">June 2025 – Aug 2025</p>
+        <h4 class="font-bold">GlowIn</h4>
+        <p>
+          Developed a mental health app aimed at improving self-esteem through community engagement and social activities. Features included daily quests, mood tracking, journaling, motivational quotes, and volunteering maps.
+        </p>
+      </div>
+
+      <div class="mb-8">
+        <p class="text-sm">Dec 2024</p>
+        <h4 class="font-bold">Will it Ring?</h4>
+        <p>
+          A simple website to help children practice dialing phone numbers, aimed at teaching them how to contact their guardians in emergencies. Featured interactive simulation and educational tools for kids.
+        </p>
+      </div>
+    </div>
+  </div>
+  <img src="tomato.png" class="absolute top-2 left-6 w-40 -z-0 opacity-100" alt="tomato decoration" />
+  <img src="tomato1.png" class="absolute bottom-1 right-0 w-32 -z-0 opacity-100" alt="tomato decoration" />
+  <img src="olive.png" class="absolute top-1/3 right-5 w-26 -z-0 opacity-100" alt="olive decoration" />
+</section>
+
+
+
+ <!-- Gallery Section -->
+<section id="gallery" class=" relative min-h-screen bg-[#244C71] p-12 flex flex-col justify-center items-center">
+  <h2 class="text-3xl mb-6 text-[#DBD4C7]">Gallery.</h2>
+
+  <img src="egg1.png" class="absolute top-20 left-0 w-28 opacity-100" alt="egg decoration" />
+  <img src="egg2.png" class="absolute top-80 right-0 w-28 opacity-100" alt="egg decoration" />
+
+  <!-- Carousel Wrapper (Oval Shape) -->
+  <div class="overflow-hidden mx-auto relative w-[350px] h-[450px] rounded-[50%]">
+    
+    <!-- Images -->
+    <div id="gallery-images" class="w-full h-full">
+      <img src="tomatoOval.png" class="w-full h-full object-cover hidden" />
+      <img src="cloudOval.png" class="w-full h-full object-cover hidden" />
+      <img src="fruitOval.png" class="w-full h-full object-cover hidden" />
+      <img src="nightOval.png" class="w-full h-full object-cover hidden" />
+      <img src="stairOval.png" class="w-full h-full object-cover hidden" />
+      <img src="cardOval.png" class="w-full h-full object-cover hidden" />
+      <img src="breadOval.png" class="w-full h-full object-cover hidden" />
+    </div>
+
+    <!-- Left Arrow -->
+    <button onclick="prevImage()" 
+      class="absolute top-1/2 left-2 -translate-y-1/2 bg-white/70 rounded-full p-2">
+      &#8592;
+    </button>
+
+    <!-- Right Arrow -->
+    <button onclick="nextImage()" 
+      class="absolute top-1/2 right-2 -translate-y-1/2 bg-white/70 rounded-full p-2">
+      &#8594;
+    </button>
+  </div>
+
+  <p class="text-[#DBD4C7] mt-6">Press the arrows to see more! </p>
+</section>
+
+<script>
+  let currentIndex = 0;
+  const images = document.querySelectorAll("#gallery-images img");
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.add("hidden");
+      if (i === index) img.classList.remove("hidden");
+    });
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
+
+  // Show the first image initially
+  showImage(currentIndex);
+</script>
+
+
+
+  <!-- Footer -->
+   <section id="contact" class="bg-cream text-center py-16">
+  <p class="text-[#244C71] text-xs mb-4">
+    my minor in art is based in photography and tech in media!
+  </p>
+
+  
+</section>
+ <!-- Footer -->
+<footer class="bg-[#244C71] text-cream px-8 py-6 flex flex-col md:flex-row justify-between items-center relative">
+  
+  <!-- Left Side (Contact + Icons) -->
+  <div class="flex flex-col items-start space-y-2">
+    <p class="text-xs">let’s get in touch.</p>
+    <a href="mailto:hkazmi312@gmail.com" class="hover:underline text-lg">hkazmi312@gmail.com</a>
+
+    <!-- Social Icons -->
+    <div class="flex space-x-4 mt-2">
+      <a href="https://github.com/" target="_blank">
+        <img src="git.png" alt="GitHub" class="w-6 h-6 hover:opacity-80 transition" />
+      </a>
+      <a href="https://linkedin.com/" target="_blank">
+        <img src="in.png" alt="LinkedIn" class="w-6 h-6 hover:opacity-80 transition" />
+      </a>
+      <a href="mailto:hkazmi312@gmail.com">
+        <img src="mail.png" alt="Email" class="w-6 h-6 hover:opacity-80 transition" />
+      </a>
+    </div>
+  </div>
+
+  <!-- Center (Big Initials) -->
+  <div class="text-[7rem] leading-none font-bold">
+    hk.
+  </div>
+
+  <!-- Right Side (Links) -->
+  <div class="flex flex-col items-end space-y-1 text-sm">
+    <a href="#landing" class="hover:underline">home</a>
+    <a href="#about" class="hover:underline">about me</a>
+    <a href="#resume" class="hover:underline">resume</a>
+    <a href="#gallery" class="hover:underline">gallery</a>
+  </div>
+</footer>
+</body>
+</html>
+
+
