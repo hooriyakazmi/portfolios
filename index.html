@@ -58,6 +58,36 @@ a, button, [role="button"], input, textarea, select {
     /* Typewriter caret blink */
     @keyframes caret { 0%,49% {opacity:1} 50%,100% {opacity:0} }
     .animate-caret { animation: caret 1s steps(1) infinite; }
+    .bubble {
+  display: inline-block;
+  background: #DBD4C7;     /* beige background */
+  color: #244C71;          /* blue text */
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 6px 14px -6px rgba(0,0,0,.35);
+  animation: floaty 6s ease-in-out infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bubble:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px -8px rgba(0,0,0,.45);
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+/* each bubble floats slightly differently */
+.bubble:nth-child(1) { animation-duration: 7s; }
+.bubble:nth-child(2) { animation-duration: 8s; animation-delay: .4s; }
+.bubble:nth-child(3) { animation-duration: 9s; animation-delay: .8s; }
+.bubble:nth-child(4) { animation-duration: 10s; animation-delay: 1.2s; }
+
   </style>
 
   <!-- Local CSS for caret blink -->
@@ -127,8 +157,6 @@ a, button, [role="button"], input, textarea, select {
   .animate-caret { animation: caret 1s steps(1) infinite }
 </style>
 
-
-
     <!-- Scroll button -->
     <div class="absolute bottom-[-32px] right-6 z-50">
   <a href="#about" 
@@ -148,17 +176,31 @@ a, button, [role="button"], input, textarea, select {
     </div>
 
     <!-- Text Content -->
-    <div class="text-[#DBD4C7]">
-      <h2 class="text-3xl font-bold mb-4">About me.</h2>
-      <p class="mb-4">
-        Hi there! I'm Hooriya, a junior at UIC studying Computer Science (with an Art minor).
-      </p>
-      <p>
-        I love working at the intersection of design and technology, whether it’s prototyping in Figma
-        or coding out a sleek front-end. In my free time, you’ll usually find me experimenting with
-        new design ideas.
-      </p>
-    </div>
+    <!-- Text Content -->
+<div class="text-[#DBD4C7] relative">
+  <h2 class="text-3xl font-bold mb-4">About me.</h2>
+  <p class="mb-4 max-w-xl text-lg">
+    Hi, I’m Hooriya!! a Computer Science junior at UIC with a minor in Art. 
+    I am passionate about UI/UX design and web development. I thrive where design meets technology, building experiences that are not 
+    only functional but also visually thoughtful. Whether sketching prototypes in Figma or coding polished interfaces, I enjoy shaping ideas into projects 
+    that feel intuitive and inspiring.
+  </p>
+
+  <!-- Floating bubbles -->
+<div class="mt-6 flex flex-wrap gap-3">
+  <span class="bubble">Figma</span>
+  <span class="bubble">Tailwind</span>
+  <span class="bubble">JavaScript</span>
+  <span class="bubble">Swift</span>
+  <span class="bubble">Astro</span>
+  <span class="bubble">Lightroom</span>
+  <span class="bubble">C</span>
+  <span class="bubble">C++</span>
+  <span class="bubble">Python</span>
+  <span class="bubble">Java</span>
+  <span class="bubble">Git</span>
+
+</div>
 
   </div>
 
@@ -388,6 +430,17 @@ a, button, [role="button"], input, textarea, select {
     <a href="#gallery" class="hover:underline">gallery</a>
   </div>
 </footer>
+<script>
+  // reveal elements when they scroll into view
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('show'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
 <script>
   // Skip on touch devices (no mouse)
   if (!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches)) {
