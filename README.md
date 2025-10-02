@@ -1,6 +1,6 @@
-# 🌸 Hooriya’s Portfolio Website
+# 🍅 Hooriya’s Portfolio Website
 
-Welcome to my personal portfolio — a digital space where I showcase my journey as a **UI/UX designer** and **computer science student** at the University of Illinois Chicago (UIC).  
+Welcome to my personal portfolio a digital space where I showcase my journey as a **UI/UX designer** and **computer science student** at the University of Illinois Chicago (UIC).  
 This site reflects how I blend **creativity and technology** to design intuitive, inclusive, and visually engaging user experiences.
 
 ---
